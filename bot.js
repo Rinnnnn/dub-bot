@@ -3,7 +3,7 @@ var fs = require('fs');	//For  writing to external files
 var os = require('os');	// For date and time
 var stdin = process.openStdin();	//Allow user input.
 
-new DubAPI({username: 'example@example', password: 'example}, function(err, bot) { // Log in
+new DubAPI({username: 'example@example', password: 'example'}, function(err, bot) { // Log in
 	if (err) return console.error(err);
 
 	console.log('Running DubAPI v' + bot.version);
