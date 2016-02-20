@@ -4,11 +4,11 @@ var fs = require('fs');	//For  writing to external files
 var os = require('os');	// For date and time
 var stdin = process.openStdin();	//Allow user input.
 
-new DubAPI({username: 'comfy@cock.li', password: 'M1kum33ku'}, function(err, bot) { // Log in
+new DubAPI({username: 'mail@mail', password: 'password''}, function(err, bot) { // Log in
 	if (err) return console.error(err);
 
 	console.log('Running DubAPI v' + bot.version);
-	function connect() {bot.connect('lolidub');}
+	function connect() {bot.connect('roomName');}
 
 	bot.on('connected', function(name) {
 		console.log('Connected to ' + name);
