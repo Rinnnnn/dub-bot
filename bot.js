@@ -7,7 +7,7 @@ new DubAPI({username: 'mail@mail', password: 'Password'}, function(err, bot) { /
 	if (err) return console.error(err);
 
 	console.log('Running DubAPI v' + bot.version);
-	function connect() {bot.connect('lolidub');}
+	function connect() {bot.connect('roomName');}
 
 	bot.on('connected', function(name) {
 		console.log('Connected to ' + name);
@@ -34,6 +34,6 @@ new DubAPI({username: 'mail@mail', password: 'Password'}, function(err, bot) { /
 	bot.on(bot.events.chatMessage, function(data) {	//monitor messages
 		var datetime = new Date();
 		console.log(data.user.username + ': ' + data.message);
-		fs.appendFile("C:\Users\Lain\My Documents\cuteBotLog.txt",datetime + ": " + data.user.username + ': ' + data.message + os.EOL);
+		fs.appendFile("cuteBotLog.txt",datetime + ": " + data.user.username + ': ' + data.message + os.EOL);
 	});
 });
