@@ -3,7 +3,7 @@ var fs = require('fs');	//For  writing to external files
 var os = require('os');	// For date and time
 var stdin = process.openStdin();	//Allow user input.
 
-new DubAPI({username: 'example@example', password: 'example'}, function(err, bot) { // Log in
+new DubAPI({username: 'comfy@cock.li', password: 'M1kum33ku'}, function(err, bot) { // Log in
 	if (err) return console.error(err);
 
 	console.log('Running DubAPI v' + bot.version);
@@ -11,6 +11,7 @@ new DubAPI({username: 'example@example', password: 'example'}, function(err, bot
 
 	bot.on('connected', function(name) {
 		console.log('Connected to ' + name);
+		bot.sendChat('/me Yawns.');
 	});
 
 	bot.on('disconnected', function(name) {
@@ -33,6 +34,6 @@ new DubAPI({username: 'example@example', password: 'example'}, function(err, bot
 	bot.on(bot.events.chatMessage, function(data) {	//monitor messages
 		var datetime = new Date();
 		console.log(data.user.username + ': ' + data.message);
-		fs.appendFile("./logs/test.txt",datetime + ": " + data.user.username + ': ' + data.message + os.EOL);	
+		fs.appendFile("C:\Users\Lain\My Documents\cuteBotLog.txt",datetime + ": " + data.user.username + ': ' + data.message + os.EOL);
 	});
 });
